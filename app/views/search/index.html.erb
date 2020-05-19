@@ -1,14 +1,14 @@
-<h1><%= @house %> has <%= @members.count %> Alumni in the Order of the Phoenix </h1>
+<h1><%= @house %> has <%= @order_members.count %> Results in the Order of the Phoenix </h1>
 
-<% @members.each do |member| %>
+<% @order_members.each do |member| %>
   <section class = "member">
-    <p class="name"><b>Name:</b> <%= member[:name] %></p>
-    <% if member[:role] != nil %>
-      <p class="role"><b>Role:</b> <%= member[:role] %></p>
+    <p class="name"><b>Name:</b> <%= member.name %></p>
+    <% if member.role != nil %>
+      <p class="role"><b>Role:</b> <%= member.role %></p>
     <% end %>
-    <p class="house"><b>House:</b> <%= member[:house] %></p>
-    <% if member[:patronus] != nil %>
-      <p class="patronus"><b>Patronus:</b> <%= member[:patronus] %></p>
+    <p class="house"><b>House:</b> <%= member.house %></p>
+    <% if member.patronus != nil %>
+      <p class="patronus"><b>Patronus:</b> <%= member.patronus %></p>
     <% end %>
     <p> --------------------- </p>
 <% end %>

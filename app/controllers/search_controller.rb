@@ -6,7 +6,7 @@ class SearchController < ApplicationController
       faraday.headers['Content-Type'] = 'application/json'
     end
 
-    response = conn.get("characters?key=$2a$10$R2Pc5iDSB5zy9Rkzd8cue.YaA7ct8sYuMhZTdYYqBnfy2JjeZ4vUK&house=Gryffindor&orderOfThePhoenix=true")
+    response = conn.get("characters?key=#{ENV['POTTER_API_KEY']}&house=Gryffindor&orderOfThePhoenix=true")
     require "pry"; binding.pry
   end
 end
